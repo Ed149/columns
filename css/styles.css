@@ -3,4 +3,139 @@ html{
 }
 *,*::after,*::before{
     box-sizing: inherit;
+    padding:0;
+    margin:0;
+}
+
+:root{
+    /*Primarios*/
+    --brightOrange:hsl(31, 77%, 52%);
+    --darkCyan:hsl(184, 100%, 22%);
+    --vDarkCyan:hsl(179, 100%, 13%);
+    /*Contenido*/
+    --tWhite:hsla(0, 0%, 100%, 0.75);/*parrafos*/
+    --vlightGray:hsl(0, 0%, 95%);/*headings*/
+}
+body{
+    font-size: .9375rem;
+    height: 100vh;
+    
+}
+
+.orange{
+    color:hsl(31, 77%, 52%);
+}
+.cyan{
+    color:hsl(184, 100%, 22%);
+}
+.dCyan{
+    color:hsl(179, 100%, 13%);
+}
+
+/* Botones */
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius: 40px;
+    background-color: var(--vlightGray);
+    font-family: 'Lexend Deca';
+    cursor:pointer;
+    border: 1px solid var(--vlightGray);
+    margin-top:0.3rem;
+}
+
+body{
+    background-color:var(--vlightGray);
+}
+
+.container{
+    margin:2rem auto;
+    max-width: 85%;
+}
+
+
+
+
+
+@media (min-width:48em){
+    .cards{display: flex;}
+    body{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+.card{
+    width:20rem;
+    height:28rem;
+    padding:2.8125rem;
+}
+@media(min-width:48em){
+    .card{
+        width:22rem;
+        height:30rem;
+    }
+}
+
+@media (max-width:375px){
+.card:first-child{
+    border-top-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+}
+.card:last-child{
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+}
+}
+
+
+
+@media (min-width:48em){
+    .card:first-child{
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+}
+    .card:last-child{
+        border-bottom-right-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+    }
+}
+
+.card h2{
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    font-family: 'Big Shoulders Display';
+    color:var(--vlightGray);
+    margin: 2rem 0;
+}
+.card p{
+    color: var(--tWhite);
+    font-family: 'Lexend Deca';
+    line-height: 1.5625rem;
+    font-weight: 400;
+    margin-bottom:1.875rem;
+    width:13.2rem;
+}
+
+@media (min-width:48em){
+
+    .card p{
+        margin-bottom: 4rem;
+        line-height: 1.7;
+    }
+}
+
+.sedans{
+    background-color:var(--brightOrange);
+}
+.suvs{
+    background-color: var(--darkCyan);
+}
+.luxury{
+    background-color: var(--vDarkCyan);
+}
+.active{
+    background-color: red;
 }
